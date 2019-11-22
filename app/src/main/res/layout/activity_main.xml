@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#e56937">
+
+    <TextView
+        android:id="@+id/txtheader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#a75430"
+        android:text="EjemploSharedPreferences"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/txtcorreo"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="96dp"
+        android:text="Correo electrónico"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtheader"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <EditText
+        android:id="@+id/CampoCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtcorreo"
+        tools:layout_editor_absoluteX="15dp"
+        android:inputType="textEmailAddress"
+        android:maxLength="20"
+        android:hint="Correo electrónico"/>
+
+    <TextView
+        android:id="@+id/txtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="11dp"
+        android:text="Password"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/CampoCorreo"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <EditText
+        android:id="@+id/CampoPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtpassword"
+        tools:layout_editor_absoluteX="15dp"
+        android:inputType="textPassword"
+        android:maxLength="10"
+        android:hint="Password"/>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="57dp"
+        android:text="GUARDAR"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/CampoPassword"
+        tools:layout_editor_absoluteX="15dp"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="21dp"
+        android:text="CARGAR"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar"
+        tools:layout_editor_absoluteX="15dp"
+        android:onClick="onClick"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
